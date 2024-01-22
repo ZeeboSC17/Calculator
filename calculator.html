@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            background-color: grey;
+            border: 10px solid grey;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+        .o {
+            background-color: orange;
+            border: 10px solid orange;
+
+            font-size: 15px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="displayCalc">
+
+    </p>
+    <p>
+        <button onclick="calculation += '1';  console.log(calculation); displayCalc(calculation);">1</button>
+        <button onclick="calculation += '2';  console.log(calculation); displayCalc(calculation);">2</button>
+        <button onclick="calculation += '3';  console.log(calculation); displayCalc(calculation);">3</button>
+        <button class="o"
+            onclick="calculation += ' + ';  console.log(calculation); displayCalc(calculation);">+</button>
+    </p>
+
+    <p>
+        <button onclick="calculation += '4';  console.log(calculation); displayCalc(calculation);">4</button>
+        <button onclick="calculation += '5';  console.log(calculation); displayCalc(calculation);">5</button>
+        <button onclick="calculation += '6';  console.log(calculation); displayCalc(calculation);">6</button>
+        <button class="o"
+            onclick="calculation += ' - ';  console.log(calculation); displayCalc(calculation);">-</button>
+    </p>
+
+    <p>
+        <button onclick="calculation += '7';  console.log(calculation); displayCalc(calculation);">7</button>
+        <button onclick="calculation += '8';  console.log(calculation); displayCalc(calculation);">8</button>
+        <button onclick="calculation += '9';  console.log(calculation); displayCalc(calculation);">9</button>
+        <button class="o"
+            onclick="calculation += ' * ';  console.log(calculation); displayCalc(calculation);">*</button>
+    </p>
+
+    <p>
+        <button onclick="calculation += '0';  console.log(calculation); displayCalc(calculation);">0</button>
+        <button onclick="calculation += '.'; console.log(calculation); displayCalc(calculation);">.</button>
+        <button
+            onclick="calculation = eval(calculation); console.log(calculation); displayCalc(calculation);">=</button>
+        <button class="o"
+            onclick="calculation += ' / ';  console.log(calculation); displayCalc(calculation);">/</button>
+    </p>
+
+    <p>
+        <button onclick="document.getElementById('displayCalc').innerHTML = ''; calculation = '';">Clear</button>
+    </p>
+
+    <script>
+        var calculation = '';
+        function displayCalc(calculation) {
+            document.getElementById("displayCalc").innerHTML = calculation;
+        }
+    </script>
+</body>
+
+</html>
